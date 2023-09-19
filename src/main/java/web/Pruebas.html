@@ -1,0 +1,270 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maria web</title>
+
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div class="pagina">
+    <div class="menu">
+        <div class="logoMenu">
+            <a href="index.html"><i class="bi bi-c-circle"></i>Maria's bot</a>
+        </div>
+        <div class="accionesMenu">
+            <div class="cajaAccionesMenu"><a href="SAP.html">SAP Conversational AI</a></div>
+            <div class="cajaAccionesMenu"><a href="Pruebas.html">Pruebas automatizadas</a></div>
+            <div class="cajaAccionesMenu"><a href="Memoria.html">Memoria explicativa</a></div>
+        </div>
+        <div class="derechaMenu"></div>
+    </div>
+    <div class="contenido">
+        <div class="cajaFlexTexto">
+            <div class="cajaTextoTitulo">
+                <H2>¿Qué son las pruebas automatizadas?</H2>
+            </div>
+            <div class="cajaTexto">
+                <p>
+                    Las pruebas automatizadas consisten en emplear una o varias herramientas para probar algún tipo
+                    de software.
+                </p>
+                <p>
+                    El objetivo de las pruebas automatizadas es comporobar que la ejecución del software está
+                    funcionando de manera esperada.
+                    El programador debe tener conocimiento de cómo debería funcionar su software, por lo que deberá
+                    plasmar en las pruebas automatizadas las órdenes necesarias para garantizar que el código
+                    funciona correctamente
+                </p>
+                <p>
+                    Existen numerosas herramientas para realizar pruebas de este estilo, pero para este TFG se ha
+                    decidido emplear Cucumber y Selenium
+                </p>
+            </div>
+            <div class="cajaTitulo">
+                <H3> ¿Qué es Cucumber?</H3>
+            </div>
+            <div class="cajaTitulo">
+                <p>
+                    A pesar de que en el proyecto se está hablando de Cucumber, el lenguaje de programación
+                    utilizado
+                    es Gherkin, el cual se utiliza para desarrollar pruebas automatizadas. Cucumber no es más que
+                    una de las herramientas que proporciona Gherkin para poder desarrollar estas pruebas.
+                    Cucumber funciona a base de escenarios. Cuando se crea un escenario bajo la extensión
+                    ".feature", se
+                    deben tener en cuenta los siguientes pasos:
+                </p>
+            </div>
+            <div class="cajaTextoLista">
+                <ul>
+                    <li style="margin:1%;">Identificar el escenario de la prueba: nos referimos a escenario como el
+                        conjunto de
+                        acciones que se van a llevar a cabo para que la prueba siga las indicaciones que le de el
+                        programador. Cada escenario debe llevar un nombre y diferentes pasos a seguir. Existen dos
+                        tipos de escenarios:
+                    </li>
+                    <ul style="margin:1%;">
+                        <li>
+                            Scneario: es un escenario clásico. Se construye con los indicadores de los pasos
+                        </li>
+                        <li>
+                            Scenario Outline: funciona igual que un escenario clásico, salvo el detalle de que
+                            permite incluir variables en los pasos a ejecutar. Este tipo de escenarios se utiliza en
+                            ocasiones deonde se quiere repetir un paso con diferentes valores.
+                        </li>
+                    </ul>
+                    <li style="margin:1%;">
+                        Pasos a seguir: para que un escenario funcione, cada "paso" está definido por un indicador.
+                        De esta forma, podemos asemejar el lenguaje humano a lo que va a hacer cada escenario. Para
+                        esto, el escenario seguirá un orden ejecución basado en una lista de acciones: "Cuando tengo
+                        esta situación dado este ejemplo, entonces ejecutaré cierto comando y comprobaré el
+                        resultado. Los indicadores se marcan con las siguientes palabras reservadas
+                    </li>
+                    <ul style="margin:1%;">
+                        <li>Given</li>
+                        <li>When</li>
+                        <li>Then</li>
+                        <li>And</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <div class="rowBoton">
+            <div class="cajaBoton">
+                <button type="button" class="btn btn-outline-primary btn-lg" onclick="">Visita la página oficial de
+                    Cucumber
+                </button>
+            </div>
+        </div>
+
+
+        <div class="cajaFlexTexto">
+            <div class="cajaTitulo">
+                <H3> ¿Qué es Selenium Web Driver?</H3>
+            </div>
+            <div class="cajaTitulo">
+                <p>
+                    Selenium Web Driver es una interfaz que simula las interacciones del usuario con cualquier
+                    navegador. En el caso de este proyecto, servirá de intermediario para recoger las órdenes
+                    escenificadas con Cucumber y posteriormente interaccionar con el chatbot alojado en la web.
+                </p>
+                <p>
+                    La conexión que tienen Cucumber y Selenium es muy sencilla. Gracias a los escenarios
+                    definidos con Cucumber, Selenium cogerá el nombre de cada uno de los pasos definidos con los
+                    identificadores y se le asignarán ordenes para proceder con las pruebas.
+                    Por ejemplo, si la primera orden de un escenario en Cucumber es "Given I am on the main
+                    page", la programación de ese paso con Selenium permitirá crear la conexión con la página
+                    principal, abriendo el driver y mostrando la dirección web establecida.
+                </p>
+            </div>
+            <div class="cajaTitulo">
+                <H5> ¿Cómo funciona la interacción de Selenium con el chatbot</H5>
+            </div>
+            <div class="cajaTitulo">
+                <p>
+                    Para poder hacer las pruebas automatizadas en el chatbot, se van a tener que recoger de
+                    forma manual los elementos "xpath" que componen el chatbot en cada mensaje. De esta forma,
+                    Selenium se encargará de leer el xpath encargado de darle al botón de abrir el desplegable
+                    del bot, para posteriormente ir leyendo los xpath de cada mensaje para comprobar que los
+                    textos, botones e interacciones son los esperados
+                </p>
+            </div>
+        </div>
+        <div class="rowBoton">
+            <div class="cajaBoton">
+                <a class="btn btn-outline-primary btn-lg" href="">Visita la página oficial de
+                    Selenium Web Driver</a>
+            </div>
+        </div>
+
+        <div class="cajaFlexTexto">
+            <div class="cajaTexto">
+                <H2>¿Cómo funcionan las pruebas?</H2>
+            </div>
+            <div class="cajaTexto">
+                <p>
+                    En los siguientes vídeos se van a poder observar las ejecucciones de las pruebas automatizadas.
+                    Estos seis vídeos mostrarán de principio a fin el proceso de ejecución de las pruebas, así como la
+                    evidencia de que han sido exitosas
+                </p>
+                <p>
+                    Para poder ver todos los vídeos, desplázate con las felchas que encontrarás a ambos lados de los
+                    vídeos.
+                </p>
+            </div>
+        </div>
+
+        <div class="rowCarousel">
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Interacción escrita"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Preguntas frecuentes"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Trámites administrativos"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                            aria-label="Convalidaciones"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                            aria-label="Redes"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                            aria-label="Localizaciones"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/z9h2Em3uThw"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 style="font-weight: bolder;">Interacción escrita </h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <iframe width="1120" height="630" src="https://www.youtube.com/embed/8F2tIqmp6mM"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                        </iframe>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 style="font-weight: bolder;">Preguntas frecuentes</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <iframe width="1120" height="630" src="https://www.youtube.com/embed/7tplzvvJTG4"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                        </iframe>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 style="font-weight: bolder;">Trámites administrativos</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <iframe width="1120" height="630" src="https://www.youtube.com/embed/Hl3mJVCv4Lo"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                        </iframe>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 style="font-weight: bolder;">Convalidaciones</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <iframe width="1120" height="630" src="https://www.youtube.com/embed/Ku7Nh5jN5zA"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                        </iframe>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 style="font-weight: bolder;">Redes</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <iframe width="1120" height="630" src="https://www.youtube.com/embed/d91u3c6QkeI"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                        </iframe>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 style="font-weight: bolder;">Localizaciones</h5>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script src="https://cdn.cai.tools.sap/webchat/webchat.js" channelId="63b1b2bb-9a9e-4501-b6b9-52938e02b23b"
+        token="5e224a04be62627ce489b3100dbd73b3" id="cai-webchat">
+</script>
+
+</html>
