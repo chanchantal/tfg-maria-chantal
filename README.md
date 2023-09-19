@@ -51,3 +51,8 @@ La web SAP Conversational AI proporciona un scrip para insertar directamente en 
 </script>
 ```
 Este script se puede encontrar en todas las clases .html definidas para este proyecto. 
+
+## Documentos añadidos
+En la carpeta src/main/java/web/docs se pueden encontrar los siguientes archivos
+- Memoria del TFG: necesaria en esa ubicación para poder hacer la llamada desde la web
+- Archivo .Excel con todas las preguntas que reconoce el chatbot en todos los apartados, como anexo del trabajo
