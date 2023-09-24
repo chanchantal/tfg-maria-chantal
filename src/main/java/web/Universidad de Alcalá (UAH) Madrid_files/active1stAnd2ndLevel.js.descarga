@@ -1,0 +1,50 @@
+// Definimos la clase del 1st y 2nd nivel
+var class1 = 'ul.nav.navbar-nav li.dropdown.yamm-fw';
+var class2 = 'ul.nav.nav-pills.nav-stacked li.son';
+
+// uri actual
+var current = window.location.pathname;
+var indexPos = current.lastIndexOf("index.html");
+if (indexPos != -1 && indexPos != 0) {
+    current = current.substr(0, indexPos);
+}
+
+// uri del nivel principal
+var currentSplit = current.split("/");
+var father = null;
+if (currentSplit.length > 1) {
+    father = "/" + currentSplit[1] + "/" + currentSplit[2] + "/";
+}
+
+// Recorremos los elementos li del menu de navegacion
+jQuery(class1).each(function() {
+    var li = jQuery(this);
+
+    // Recorremos los hijos del menu de navegacion
+    li.children().each(function() {
+
+        // Si contiene un enlace al uri principal lo marcamos activo
+        if (jQuery(this).attr('href') === father) {
+            li.addClass(' active');
+        }
+    });
+});
+
+// Recorremos los elementos li del menu de navegacion
+jQuery(class2).each(function() {
+    var li = jQuery(this);
+
+    // Recorremos los hijos del menu de navegacion
+    li.children().each(function() {
+
+        // Si contiene un enlace al uri actual lo marcamos activo
+        if (jQuery(this).attr('href') === current) {
+            li.addClass(' active');
+        }
+    });
+
+});
+
+	/* Write here your custom javascript codes */
+$("meta[property='og:url']").attr("content", "www.uah.es");
+$("meta[property='twitter:url']").attr("content", "www.uah.es");
